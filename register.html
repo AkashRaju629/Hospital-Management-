@@ -8,6 +8,18 @@
 	<meta name="author" content="hospital.com">
 	<title>hospital.com</title>
 	<link rel="stylesheet" type="text/css" href="css/index.css">
+
+	<script type="text/javascript">
+					function validate(){
+						var input_text =document.getElementById('name'&&"email"&&"mobile"&&"address"&&"username"&&"password");
+						if (input_text.value == "") {
+							alert("please provide the input");
+							return false;
+						}
+						alert("Successfully Registered");
+					}
+					
+				</script>
 </head>
 <body>
 <!-- Start Header Coding-->
@@ -40,7 +52,7 @@
      <div class="form-box">
      	<h1>User Registration Page</h1>
      	<hr>
-     	<form>
+     	<form method="Post" onsubmit="return validate();">
 				<label for="name"><b>Name :</b></label><br/>
 				<input type="text" name="name" id="name" />
 				<br/><br/>
@@ -53,6 +65,11 @@
 				<input type="number" name="mobile" id="mobile" />
 				<br/><br/>
 
+				<label for="message"><b>Address :</b></label>
+				<br/>
+				<textarea id="message"  name="name" id="address"></textarea>
+				<br/><br/>
+
 				<label for="username"><b>Username :</b></label><br/>
 				<input type="text" name="username" id="username" />
 				<br/><br/>
@@ -60,11 +77,6 @@
 				<label for="password"><b>Password :</b></label>
 				<br/>
 				<input type="password" name="password" id="password" />
-				<br/><br/>
-
-				<label for="re-password"><b>Confirm Password :</b></label>
-				<br/>
-				<input type="password" name="re-password" id="re-password" />
 				<br/><br/>
 
 				<button type="submit" id="register-btn">Submit</button>
