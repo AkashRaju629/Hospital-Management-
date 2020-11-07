@@ -8,6 +8,18 @@
 	<meta name="author" content="hospital.com">
 	<title>hospital.com</title>
 	<link rel="stylesheet" type="text/css" href="css/index.css">
+
+	<script type="text/javascript">
+					function validate(){
+						var input_text =document.getElementById('username'&&"password");
+						if (input_text.value == "") {
+							alert("please enter the input");
+							return false;
+						}
+						alert("You will be logged in few Minutes");
+					}
+					
+				</script>
 </head>
 <body>
 <!-- Start Header Coding-->
@@ -40,7 +52,7 @@
      <div class="form-box">
      	<h1>Login Page</h1>
      	<hr>
-     	<form>
+     	<form method="Post" onsubmit="return validate();">
      		<label for="username"><b>Username :</b></label><br/>
 				<input type="text" name="username" id="username" />
 				<br/><br/>
@@ -51,9 +63,8 @@
 				<br/><br/>
 
 				<button type="submit" id="login-btn">Login</button>
-				<button type="submit" id="login-btn">Register New User</button>
 				<br/><br/>
-				<p>Forget Password ? <a href="register.html">Click Here</a></p>
+				<p>New User ? <a href="register.html">Register Here</a></p>
      	</form>
      </div>
     </div>
