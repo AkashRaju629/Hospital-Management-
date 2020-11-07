@@ -10,6 +10,18 @@
 	<meta name="author" content="hospital.com">
 	<title>hospital.com</title>
 	<link rel="stylesheet" type="text/css" href="css/index.css">
+
+	<script type="text/javascript">
+					function validate(){
+						var input_text =document.getElementById("fullname"&&"email"&&"message");
+						if (input_text.value == "") {
+							alert("please give the input");
+							return false;
+						}
+						alert("Your Query is successfully submitted");
+					}
+					
+				</script>
 </head>
 <body>
 <!-- Start Header Coding-->
@@ -42,7 +54,7 @@
      <div class="form-box">
      	<h1>Contact Us</h1>
      	<hr>
-     	<form>
+     	<form method="Post" onsubmit="return validate();">
      		<label for="fullname"><b>Your name :</b></label><br/>
 				<input type="text" name="name" id="fullname" placeholder="Enter Fullname">
 				<br/><br/>
